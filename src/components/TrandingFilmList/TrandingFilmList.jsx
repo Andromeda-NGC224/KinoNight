@@ -8,7 +8,7 @@ export default function TrandingFilmList({ films }) {
                 <li key={index}>
                     <Link to={`/movies/${film.id}`}>{film.title}
                     <img src={`https://image.tmdb.org/t/p/w500/${film.backdrop_path
-                            }`} alt={film.title} />
+                            }`} alt={film.title} style={{ width: "200px" }}  />
                     </Link>
                 </li>
             ))}

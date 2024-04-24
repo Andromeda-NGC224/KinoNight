@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMovieDetails } from '../../api';
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom"
+import MovieList from '../../components/MovieList/MovieList'
 import Loader from "../../components/Loader/Loader";
 import Error from "../../components/Error/Error";
 
@@ -32,7 +33,7 @@ useEffect(() => {
         <div>
             {loading && <Loader />}
             {error && <Error/>}
-            
+            <MovieList movie={movies} />
         </div>
     )
 }

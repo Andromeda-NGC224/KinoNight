@@ -3,7 +3,7 @@ import css from './BackLink.module.css';
 
 export default function BackLink({ to, children }) {
   return (
-    <Link to={to}>
+    <Link className={css.backBtn} to={to}>
       {children}
     </Link>
   );

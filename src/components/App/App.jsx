@@ -19,9 +19,9 @@ export default function App() {
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/movies" element={<MoviesPage />}></Route>
         <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
-          <Route path="/movies/:movieId/cast" element={<MovieCast />}>
+          <Route path="credits" element={<MovieCast />}>
           </Route>
-          <Route path="/movies/:movieId/reviews" element={<MovieReviews />}>
+          <Route path="reviews" element={<MovieReviews />}>
         </Route>
         </Route>
         <Route path="*" element={<NotFoundPage />}></Route>

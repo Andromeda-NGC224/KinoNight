@@ -1,29 +1,48 @@
-import { Link } from 'react-router-dom';
-import { useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { useRef, useState } from "react";
 import BackLink from '../../components/BackLink/BackLink'
+import MovieReviews from '../../components/MovieReviews/MovieReviews'
+import MovieCast from '../../components/MovieCast/MovieCast'
+import css from '../MovieList/MovieList.module.css'
 
-export default function MovieList({ movie }) {
 
+export default function MovieList({ movie, movieId }) {
+    const { poster_path, title, vote_average, overview, genres } = movie;
+
+    const [seeCast, setSeeCast] = useState(false);
+    const [seeReviews, setSeeReviews] = useState(false);
+
+    const onMovieCast = () => {
+    setSeeCast(true)
+    setSeeReviews(false)
+  }
+    const onMovieReview = () => {
+      setSeeReviews(true)
+    setSeeCast(false)
+    
+  }
+
+    
 const location = useLocation();
-  const backLinkHref = location.state ?? "/";
+  const backLinkHref = useRef(location.state ?? "/");
     return (
         <div>
-            <BackLink to={backLinkHref}>Go Back</BackLink>
+            <div className={css.mainContainer}>
+            <span className={css.backBtnCont}><BackLink className={css.backBtn} to={backLinkHref.current} >Go Back</BackLink></span>
             
-            <div><img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path
-                            }`} alt={movie.title} />
-                <ul>
+            
+                <img className={css.mainImg} src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title} />
+                <ul className={css.mainList}>
                     <li>
-                        <h2>{movie.title}</h2>
-                        <p>User score: {movie.
-vote_average
+                        <h2>{title}</h2>
+                        <p>User score: {vote_average
 }</p>
                     </li>
                     <li><h3>Overview</h3>
-                        <p>{movie.overview}</p>
+                        <p>{overview}</p>
                     </li>
                     <li><h4>Ganres</h4>
-                    {movie.genres && movie.genres.map((genre, index) => (
+                    {genres && genres.map((genre, index) => (
                                 <p key={index}>{genre.name}</p>
                             ))}   
                     </li>
@@ -32,12 +51,17 @@ vote_average
             <div>
                 <p>Additional information</p>
                 <ul>
-                    <li>Cast</li>
-                    <li>Reviews</li>
+                    <li>
+                        <Link to={`/movies/${movieId}/credits`} onClick={onMovieCast}>Cast</Link>
+                    </li>
+                    <li>
+                        <Link to={`/movies/${movieId}/reviews`} onClick={onMovieReview}>Reviews</Link>
+                    </li>
                 </ul>
-           </div>
-
-
+            </div>
+            <Outlet />
+            {seeCast && <MovieCast movieId={movieId}></MovieCast>}
+            {seeReviews && <MovieReviews movieId={movieId}></MovieReviews>}
         </div>
     )
 }

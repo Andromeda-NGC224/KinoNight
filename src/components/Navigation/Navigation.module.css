@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  border-bottom: 1px solid white;
+  padding: 20px 0 20px 0;
+  margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #220335;
+}
+
+.link:first-child {
+  margin-left: 20px;
+}
+.link {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 4px 12px 4px 12px;
+  font-size: 24px;
+  margin: 0 8px 0 8px;
+  border: none;
+  color: #fff;
+}
+
+.link:hover {
+  color: rgb(224, 196, 169);
+}
+
+.active {
+  border: 2px solid #fff;
+  border-radius: 50px;
+}

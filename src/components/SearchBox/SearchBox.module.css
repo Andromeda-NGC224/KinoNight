@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 30px;
+  padding: 8px;
+  background-color: #fff;
+  border: none;
+  border-radius: 100px;
+  margin: 0 auto;
+}
+
+.input {
+  font-size: 22px;
+  border: none;
+  width: 250px;
+  height: 35px;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.input::placeholder {
+  transition: color 0.3s ease;
+}
+.input:focus::placeholder {
+  color: transparent;
+}
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+.iconSearch:hover {
+  fill: rgb(253, 188, 67);
+}

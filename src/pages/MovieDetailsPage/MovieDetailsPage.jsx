@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMovieDetails } from '../../api';
 import { useParams } from "react-router-dom"
-import MovieList from '../../components/MovieList/MovieList'
+import MovieCard from '../../components/MovieCard/MovieCard'
 import Loader from "../../components/Loader/Loader";
 import Error from "../../components/Error/Error";
 import css from '../MovieDetailsPage/MovieDetailsPage.module.css'
@@ -36,10 +36,10 @@ useEffect(() => {
 }, [movieId]);
 
     return (
-        <div>
+        <div className={css.mainCont}>
             {loading && <Loader />}
             {error && <Error/>}
-            <MovieList movie={movies} movieId={movieId} />
+            <MovieCard movie={movies} movieId={movieId} />
             {noData && <p>No information about film, sorry.</p>}
         </div>
     )

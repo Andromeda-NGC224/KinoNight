@@ -1,7 +1,7 @@
 import { IoSearch } from "react-icons/io5";
 import { Toaster, toast } from 'react-hot-toast';
-
 import css from '../SearchBox/SearchBox.module.css'
+
 
 export default function SearchBox({ onSearch }) {
     

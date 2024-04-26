@@ -1,0 +1,12 @@
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.home {
+  text-decoration: underline;
+}
+.home:hover {
+  color: rgb(255, 214, 167);
+}

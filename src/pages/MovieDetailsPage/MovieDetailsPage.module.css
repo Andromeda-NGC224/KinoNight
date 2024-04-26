@@ -1,1 +1,8 @@
-
+.mainCont {
+  display: flex;
+  flex-direction: column;
+}
+.loader {
+  align-self: center;
+  justify-self: center;
+}

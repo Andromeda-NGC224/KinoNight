@@ -1,0 +1,26 @@
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  max-width: 83vw;
+  margin: 12px auto 0 auto;
+  gap: 24px;
+}
+.reviewsListItem {
+  max-width: 83vw;
+  border: 1px solid rgb(46, 0, 105);
+  padding: 12px;
+  border-radius: 20px;
+}
+.reviewsListItemBox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.reviewsListItemImg {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(255, 199, 147);
+  border-radius: 50px;
+  margin-right: 8px;
+  margin-bottom: 12px;
+}

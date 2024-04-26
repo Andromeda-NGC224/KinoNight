@@ -3,7 +3,7 @@ import { useEffect, useState} from "react";
 import Loader from "../../components/Loader/Loader";
 import Error from "../../components/Error/Error";
 import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
-import TrandingFilmList from '../../components/TrandingFilmList/TrandingFilmList'
+import MovieList from '../../components/MovieList/MovieList'
 import css from '../HomePage/HomePage.module.css'
 
 
@@ -43,12 +43,13 @@ useEffect(() => {
 
 
     return (
-        <div>
+        <div className={css.mainCont}>
             <h1 className={css.title}>The most popular films today.</h1>
             {loading && <Loader />}
             {error && <Error/>}
-            {trandingFilms.length > 0 && <TrandingFilmList films={trandingFilms}></TrandingFilmList>}
+            {trandingFilms.length > 0 && <MovieList films={trandingFilms}></MovieList>}
             {trandingFilms.length > 0 && <LoadMoreBtn onClick={handleLoadMore}></LoadMoreBtn>}
+            <div style={{ height: '32px' }}></div>
         </div>
     )
 }

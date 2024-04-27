@@ -22,7 +22,7 @@ export default function SearchBox({ onSearch }) {
         <div>
              <Toaster position="top-right" />
         <form className={css.form} onSubmit={handleSubmit}>
-            <input className={css.input} type="text" name="searchInput" autoComplete="off" placeholder="Search images..." />
+            <input className={css.input} type="text" name="searchInput" autoComplete="off" placeholder="Search films..." />
             <button className={css.btn} type="submit"><IoSearch size={26} className={css.iconSearch} /></button>
         </form>
     </div>

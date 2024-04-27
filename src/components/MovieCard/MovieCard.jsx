@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import BackLink from '../BackLink/BackLink'
 import MovieReviews from '../MovieReviews/MovieReviews'
 import MovieCast from '../MovieCast/MovieCast'
@@ -7,6 +7,7 @@ import css from './MovieCard.module.css'
 
 
 export default function MovieCard({ movie, movieId }) {
+
     const { poster_path, title, vote_average, overview, genres } = movie;
 
     const [seeCast, setSeeCast] = useState(false);
@@ -20,7 +21,19 @@ export default function MovieCard({ movie, movieId }) {
       setSeeReviews(true)
     setSeeCast(false)
     
-  }
+    }
+    
+     useEffect(() => {
+    if (seeCast || seeReviews) {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 1000,
+                behavior: "smooth",
+            });
+        }, 300);
+    }
+}, [seeCast, seeReviews]);
+    
 
     const location = useLocation();
     const backLinkHref = useRef(location.state ?? "/");
@@ -59,9 +72,9 @@ export default function MovieCard({ movie, movieId }) {
                         <Link to={`/movies/${movieId}/reviews`} onClick={onMovieReview}>- Reviews</Link>
                         </li>
                     </ul>
-            
-                {seeCast && <MovieCast movieId={movieId}></MovieCast>}
-                {seeReviews && <MovieReviews movieId={movieId}></MovieReviews>}
+
+                    {seeCast && <MovieCast movieId={movieId}></MovieCast>}
+                    {seeReviews && <MovieReviews movieId={movieId}></MovieReviews>}
                     </div>
             </div>
         </div>

@@ -24,13 +24,14 @@ export default function MovieCard({ movie, movieId }) {
 
     const location = useLocation();
     const backLinkHref = useRef(location.state ?? "/");
+    const noImg = "https://i.pinimg.com/564x/5d/b3/f9/5db3f9d7bd0de311088be68c4edaa001.jpg"
     
     return (
         <div className={css.allContent}>
 
             <BackLink className={css.backBtn} to={backLinkHref.current} >Go Back</BackLink>
             <div className={css.mainContainer}>
-            <img className={css.picture} src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title} />
+            <img className={css.picture} src={poster_path ? (`https://image.tmdb.org/t/p/w500/${poster_path}`) : noImg} alt={title} />
 
                 <ul className={css.mainList}>
                     <li>
@@ -52,7 +53,7 @@ export default function MovieCard({ movie, movieId }) {
                 <div className={css.additionalListsCont}>
                 <ul className={css.additionaList}>
                     <li className={css.additionaListItem}>
-                        <Link to={`/movies/${movieId}/credits`} onClick={onMovieCast}>- Cast</Link>
+                        <Link to={`/movies/${movieId}/credits`} onClick={onMovieCast}>- Actors</Link>
                     </li>
                     <li className={css.additionaListItem}>
                         <Link to={`/movies/${movieId}/reviews`} onClick={onMovieReview}>- Reviews</Link>

@@ -24,3 +24,7 @@
   margin-right: 8px;
   margin-bottom: 12px;
 }
+.reviewsListItemText {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}

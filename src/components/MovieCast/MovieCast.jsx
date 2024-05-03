@@ -45,13 +45,13 @@ export default function MovieCast({ movieId }) {
                 (`https://image.tmdb.org/t/p/w500/${cast.profile_path}`) :
                 noImg} alt={cast.name} />
                         <div className={css.castListText}>
-                            <p>Name: <strong>{cast.name}</strong></p>
-                            <p>Role: <strong>{cast.character}</strong></p>
+                            <p>Ім'я: <strong>{cast.name}</strong></p>
+                            <p>Роль: <strong>{cast.character}</strong></p>
                         </div>
                     </li>
                 ))}
             </ul>}
-            {noData && <p>There is no information about the actors, unfortunately.</p>}
+            {noData && <p>Немає інформації про акторів, на жаль.</p>}
         </div>
     )
 }

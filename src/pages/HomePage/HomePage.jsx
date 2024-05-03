@@ -44,7 +44,7 @@ useEffect(() => {
 
     return (
         <div className={css.mainCont}>
-            <h1 className={css.title}>The most popular films today.</h1>
+            <h1 className={css.title}>Найпопулярніші фільми сьогодні.</h1>
             {loading && <Loader />}
             {error && <Error/>}
             {trandingFilms.length > 0 && <MovieList films={trandingFilms}></MovieList>}

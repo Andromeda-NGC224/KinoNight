@@ -52,7 +52,7 @@ export default function MovieReviews({ movieId }) {
                     </li>
                 ))}
             </ul>}
-            {noData && <p>No reviews yet...</p>}
+            {noData && <p>Ще немає відгуків...</p>}
         </div>
     )
 }

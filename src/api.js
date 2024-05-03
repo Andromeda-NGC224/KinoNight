@@ -9,6 +9,7 @@ export const getTrandingMovies = async (page) => {
       Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOTkzMjVhOTAzZGMyMmM5ZDI0ZGUxMjRiZDRlYzJjNyIsInN1YiI6IjY2MjdhMWIzNjNlNmZiMDE3ZWZkY2EwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.x-KuWUIz479j2eqEG3Tx_TXqkv-_QOpTnYYL_IzpEhU`,
     },
     params: {
+      language: "uk",
       page: page,
     },
   };
@@ -25,6 +26,9 @@ export const getMovieDetails = async (movieId) => {
       Authorization:
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOTkzMjVhOTAzZGMyMmM5ZDI0ZGUxMjRiZDRlYzJjNyIsInN1YiI6IjY2MjdhMWIzNjNlNmZiMDE3ZWZkY2EwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.x-KuWUIz479j2eqEG3Tx_TXqkv-_QOpTnYYL_IzpEhU",
     },
+    params: {
+      language: "uk",
+    },
   };
 
   const response = await axios.get(url, options);
@@ -38,6 +42,9 @@ export const getMovieCast = async (movieId) => {
     headers: {
       Authorization:
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOTkzMjVhOTAzZGMyMmM5ZDI0ZGUxMjRiZDRlYzJjNyIsInN1YiI6IjY2MjdhMWIzNjNlNmZiMDE3ZWZkY2EwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.x-KuWUIz479j2eqEG3Tx_TXqkv-_QOpTnYYL_IzpEhU",
+    },
+    params: {
+      language: "uk",
     },
   };
 
@@ -68,6 +75,7 @@ export const getMovies = async (query, page) => {
         "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOTkzMjVhOTAzZGMyMmM5ZDI0ZGUxMjRiZDRlYzJjNyIsInN1YiI6IjY2MjdhMWIzNjNlNmZiMDE3ZWZkY2EwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.x-KuWUIz479j2eqEG3Tx_TXqkv-_QOpTnYYL_IzpEhU",
     },
     params: {
+      language: "uk",
       query: query,
       page: page,
     },

@@ -11,8 +11,11 @@
 .mainList {
   display: flex;
   flex-direction: column;
-  row-gap: 24px;
+  row-gap: 12px;
   width: 50vw;
+}
+.mainListItem {
+  padding-top: 18px;
 }
 
 .mainImg {
@@ -30,10 +33,23 @@
   border: 1px solid black;
 }
 .listItemTitle {
-  padding-bottom: 8px;
+  color: #ebe4ff;
+}
+.listItemTitleOriginal {
+  padding-bottom: 12px;
+  padding-left: 12px;
+  color: grey;
+}
+
+.listItemGanres {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .genresText {
   padding-bottom: 2px;
+  text-decoration: underline;
 }
 .additionalCont {
   padding-left: 40px;
@@ -42,19 +58,35 @@
 }
 .additionalTitle {
   font-size: 18px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   padding-bottom: 18px;
+  color: #ebe4ff;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
 }
-
+.additionalTitleIcon {
+  width: 20px;
+  height: 20px;
+}
 .additionaList {
   min-width: 80px;
   margin-right: 50px;
+  display: flex;
+  column-gap: 18px;
+  padding-bottom: 12px;
 }
 .additionaListItem {
   padding-bottom: 8px;
+  color: #bfa9ff;
 }
 
 .additionaListItem:hover {
   color: rgb(247, 211, 165);
+}
+.ratingIcon {
+  padding-right: 4px;
+  width: 18px;
+  height: 18px;
+  color: #bfa9ff;
 }

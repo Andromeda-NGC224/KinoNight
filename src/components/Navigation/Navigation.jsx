@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import css from '../Navigation/Navigation.module.css'
 import clsx from "clsx";
+import { GiFilmSpool } from "react-icons/gi";
+import { CiSearch } from "react-icons/ci";
 
 const NavLinkStyle = ({ isActive }) => {
     return clsx(css.link, isActive && css.active)
@@ -9,8 +11,10 @@ const NavLinkStyle = ({ isActive }) => {
 export default function Navigation() {
     return (
         <nav className={css.nav}>
-            <NavLink className={NavLinkStyle} to="/">Home</NavLink>
-            <NavLink className={NavLinkStyle} to="/movies">Movies</NavLink>
+            <Link to="/"><GiFilmSpool className={css.navIcon} /></Link>
+            <NavLink className={NavLinkStyle} to="/">Головна</NavLink>
+            <NavLink className={NavLinkStyle} to="/movies">Фільми <CiSearch className={css.navIconSearch}/>
+</NavLink>
         </nav>
     ); 
 }

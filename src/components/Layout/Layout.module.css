@@ -192,16 +192,16 @@
     width: 110px;
   }
   .stars:after {
-    box-shadow: 81vw 25vh 1.2vmin #fff, 89vw 29vh 1.1vmin #fff,
-      78vw 22vh 1.4vmin #fff, 3vw 17vh 1.3vmin #fff, 13vw 27vh 1.3vmin #fff,
-      86vw 33vh 1.3vmin #fff, 92vw 25vh 1.4vmin #fff, 99vw 26vh 1.3vmin #fff,
-      95vw 40vh 1.3vmin #fff, 30vw 30vh 1.3vmin #fff, 95vw 23vh 1.4vmin #fff,
-      31vw 17vh 1.3vmin #fff, 16vw 12vh 1.4vmin #fff, 13vw 27vh 1.3vmin #fff,
-      70vw 22vh 1.3vmin #fff, 80vw 16vh 1.3vmin #fff, 90vw 16vh 1.2vmin #fff,
-      70vw 13vh 1.3vmin #fff, 25vw 32vh 1.4vmin #fff, 24vw 28vh 1.3vmin #fff,
-      15vw 31vh 1.3vmin #fff, 6vw 40vh 1.3vmin #fff, 76vw 40vh 1.3vmin #fff,
-      77vw 34vh 1.3vmin #fff, 8vw 25vh 1.3vmin #fff, 66vw 19vh 1.2vmin #fff,
-      67vw 32vh 1.4vmin #fff, 51vw 24vh 1.3vmin #fff, 43vw 32vh 1.5vmin #fff,
-      45vw 61vh 1.3vmin #fff, 58vw 45vh 1.4vmin #fff, 51vw 51vh 1.3vmin #fff;
+    box-shadow: 80vw 24vh 0.7vmin #fff, 88vw 28vh 0.6vmin #fff,
+      77vw 21vh 0.9vmin #fff, 2vw 16vh 0.8vmin #fff, 12vw 26vh 0.8vmin #fff,
+      85vw 32vh 0.8vmin #fff, 91vw 24vh 0.9vmin #fff, 98vw 25vh 0.8vmin #fff,
+      94vw 39vh 0.8vmin #fff, 29vw 29vh 0.8vmin #fff, 94vw 22vh 0.9vmin #fff,
+      30vw 16vh 0.8vmin #fff, 15vw 11vh 0.9vmin #fff, 12vw 26vh 0.8vmin #fff,
+      69vw 21vh 0.8vmin #fff, 79vw 15vh 0.8vmin #fff, 89vw 15vh 0.7vmin #fff,
+      69vw 12vh 0.8vmin #fff, 24vw 31vh 0.9vmin #fff, 23vw 27vh 0.8vmin #fff,
+      14vw 30vh 0.8vmin #fff, 5vw 39vh 0.8vmin #fff, 75vw 39vh 0.8vmin #fff,
+      76vw 33vh 0.8vmin #fff, 7vw 24vh 0.8vmin #fff, 65vw 18vh 0.7vmin #fff,
+      66vw 31vh 0.9vmin #fff, 50vw 23vh 0.8vmin #fff, 42vw 31vh 1vmin #fff,
+      44vw 60vh 0.8vmin #fff, 57vw 44vh 0.9vmin #fff, 50vw 50vh 0.8vmin #fff;
   }
 }

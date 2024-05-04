@@ -35,6 +35,7 @@
 }
 .listItemTitle {
   color: #ebe4ff;
+  padding-bottom: 4px;
 }
 .listItemTitleOriginal {
   padding-bottom: 12px;
@@ -96,9 +97,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 95vw;
-  height: 75vh;
+  max-width: 100vw;
   margin: 0 auto;
+  border-top: 1px solid white;
 }
 .pictureDrop {
   width: 100%;
@@ -110,27 +111,26 @@
     height: 360px;
   }
   .mainContPoster {
-    width: 95vw;
-    height: 25vh;
+    height: 180px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 374px) {
   .mainContPoster {
-    height: 30vh;
+    height: 240px;
   }
 }
 @media screen and (min-width: 768px) {
   .mainContPoster {
-    height: 50vh;
+    height: 400px;
   }
 }
 @media screen and (min-width: 1024px) {
   .mainContPoster {
-    height: 70vh;
+    height: 550px;
   }
 }
 @media screen and (min-width: 1440px) {
   .mainContPoster {
-    height: 90vh;
+    height: 820px;
   }
 }

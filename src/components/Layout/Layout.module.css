@@ -1,3 +1,82 @@
 .layoutCont {
   width: 100%;
 }
+
+.stars:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0.2vmin;
+  height: 0.2vmin;
+  border-radius: 50%;
+  color: transparent;
+  animation: blink 8s linear infinite;
+}
+.stars:after {
+  box-shadow: 80vw 24vh 0.2vmin #fff, 88vw 28vh 0.1vmin #fff,
+    77vw 21vh 0.2vmin #fff, 2vw 16vh 0.1vmin #fff, 12vw 26vh 0.2vmin #fff,
+    85vw 32vh 0.1vmin #fff, 91vw 24vh 0.2vmin #fff, 98vw 25vh 0.1vmin #fff,
+    94vw 39vh 0.2vmin #fff, 29vw 29vh 0.1vmin #fff, 94vw 22vh 0.1vmin #fff,
+    30vw 16vh 0.2vmin #fff, 15vw 11vh 0.1vmin #fff, 12vw 26vh 0.1vmin #fff,
+    69vw 21vh 0.2vmin #fff, 79vw 15vh 0.2vmin #fff, 89vw 15vh 0.2vmin #fff,
+    69vw 12vh 0.2vmin #fff, 24vw 31vh 0.1vmin #fff, 23vw 27vh 0.2vmin #fff,
+    14vw 30vh 0.2vmin #fff, 5vw 39vh 0.2vmin #fff, 75vw 39vh 0.2vmin #fff,
+    76vw 33vh 0.2vmin #fff, 7vw 24vh 0.2vmin #fff, 65vw 18vh 0.2vmin #fff,
+    66vw 31vh 0.1vmin #fff, 50vw 23vh 0.2vmin #fff, 42vw 31vh 0.1vmin #fff,
+    44vw 60vh 0.2vmin #fff, 57vw 44vh 0.1vmin #fff, 50vw 50vh 0.2vmin #fff;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.01;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.shootingStar1 {
+  position: absolute;
+  opacity: 0;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  top: 79px;
+  left: 560px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: animate1 5s linear infinite;
+  z-index: -1;
+  animation-delay: 5s;
+}
+.shootingStar1:before {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate1 {
+  0% {
+    transform: rotate(310deg) translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(310deg) translateX(-1000px);
+    opacity: 0;
+  }
+}

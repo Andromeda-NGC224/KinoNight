@@ -58,26 +58,37 @@ export default function MovieCard({ movie, movieId }) {
                     </li>
                     <li className={css.listItemGanres}>
                         <h4 className={css.listItemTitle}>Дата виходу : </h4>
-                        <p><strong>{releaseDate} рік</strong></p>
+                        <p>
+                        {releaseDate !== "" ? (<strong>{releaseDate} рік</strong> ) : "Немає інформації"}
+                        </p>
                     </li>
                     <li className={css.listItemGanres}>
                         <h4 className={css.listItemTitle}>Рейтинг : </h4>
                         <p className={css.ratingText}><IoIosStarOutline className={css.ratingIcon}/>
- <strong>{vote_average}</strong>/10</p>
+                             {vote_average !== 0 ? (<strong>{vote_average}</strong>) : "-"}/10
+                        </p>
                     </li>
-    <li className={css.listItemGanres}>
+                    <li className={css.listItemGanres}>
                         <h4 className={css.listItemTitle}>Жанр :</h4>
-                    {genres && genres.map((genre, index) => (
-                                <p className={css.genresText} key={index}>{genre.name}</p>
-                            ))}   
+                        {genres && genres.length > 0 ? (
+                            genres.map((genre, index) => (
+                                <p className={css.genresText} key={index}>
+                                    {genre.name}
+                                </p>
+                            ))
+                        ) : (
+                            <p className={css.genresText}>Немає інформації</p>
+                        )}
                     </li>
                     <li className={css.listItemGanres}>
                         <h4 className={css.listItemTitle}>Час : </h4>
-                        <p><strong>{runtime} хв.</strong></p>
+                        <p>
+                            {runtime !== 0 ? <strong>{runtime} хв.</strong> : "Немає інформації"}
+                        </p>
                     </li>
                     <li className={css.mainListItem}>
                         <h3 className={css.listItemTitle}>Про що в фільмі «{title}»: </h3>
-                        <p>{overview}</p>
+                        <p>{overview !== "" ? overview : "Немає інформації"}</p>
                     </li>
             </ul>
             </div>

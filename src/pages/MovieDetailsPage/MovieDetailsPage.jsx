@@ -40,7 +40,7 @@ useEffect(() => {
             {loading && <Loader />}
             {error && <Error/>}
             <MovieCard movie={movies} movieId={movieId} />
-            {noData && <p>No information about film, sorry.</p>}
+            {noData && <p>Немає інформації про фільм, вибачте.</p>}
         </div>
     )
 }

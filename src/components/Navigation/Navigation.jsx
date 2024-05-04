@@ -11,10 +11,16 @@ const NavLinkStyle = ({ isActive }) => {
 export default function Navigation() {
     return (
         <nav className={css.nav}>
+            <div className={css.navLinks}>
             <Link to="/"><GiFilmSpool className={css.navIcon} /></Link>
             <NavLink className={NavLinkStyle} to="/">Головна</NavLink>
-            <NavLink className={NavLinkStyle} to="/movies">Фільми <CiSearch className={css.navIconSearch}/>
-</NavLink>
+            <NavLink className={NavLinkStyle} to="/movies">Фільми 
+                </NavLink>
+            </div>
+            <NavLink to="/movies">
+                <CiSearch className={css.navIconSearch} /> 
+                </NavLink>
+            
         </nav>
     ); 
 }

@@ -59,7 +59,7 @@ export default function MoviesPage() {
             <SearchBox onSearch={onHandleSearch}></SearchBox>
             {loading && <Loader />}
             {error && <Error />}
-  {noData && <p style={{ textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '40px'}}>Unfortunately, no films were found for this request.</p>}
+  {noData && <p style={{ textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '40px'}}>На жаль, за цим запитом фільмів не знайдено.</p>}
             {movies.length > 0 && <SearchMovieList films={movies}></SearchMovieList>}
             {movies.length > 0 && <LoadMoreBtn onClick={handleLoadMore}></LoadMoreBtn>}
             <div style={{ height: '32px' }}></div>

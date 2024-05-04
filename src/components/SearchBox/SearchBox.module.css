@@ -34,3 +34,27 @@
 .iconSearch:hover {
   fill: rgb(253, 188, 67);
 }
+
+@media screen and (max-width: 425px) {
+  .form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+    height: 25px;
+    padding: 8px;
+    background-color: #fff;
+    border: none;
+    border-radius: 100px;
+    margin: 0 auto;
+  }
+  .input {
+    font-size: 18px;
+    border: none;
+    width: 180px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    outline: none;
+  }
+}

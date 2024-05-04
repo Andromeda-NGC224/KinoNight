@@ -5,11 +5,11 @@ import Loader from "../../components/Loader/Loader";
 import Error from "../../components/Error/Error";
 import SearchBox from '../../components/SearchBox/SearchBox';
 import LoadMoreBtn from '../../components/LoadMoreBtn/LoadMoreBtn'
-import SearchMovieList from '../../components/SearchMovieList/SearchMovieList'
-import css from '../MoviesPage/MoviesPage.module.css'
+import css from '../SearchPage/SearchPage.module.css'
+import MovieList from '../../components/MovieList/MovieList';
 
 
-export default function MoviesPage() {
+export default function SearchPage() {
 
     const [movies, setMovies] = useState([]);
     const [page, setPage] = useState(1);
@@ -60,7 +60,7 @@ export default function MoviesPage() {
             {loading && <Loader />}
             {error && <Error />}
   {noData && <p style={{ textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '40px'}}>На жаль, за цим запитом фільмів не знайдено.</p>}
-            {movies.length > 0 && <SearchMovieList films={movies}></SearchMovieList>}
+            {movies.length > 0 && <MovieList films={movies}></MovieList>}
             {movies.length > 0 && <LoadMoreBtn onClick={handleLoadMore}></LoadMoreBtn>}
             <div style={{ height: '32px' }}></div>
         </div>

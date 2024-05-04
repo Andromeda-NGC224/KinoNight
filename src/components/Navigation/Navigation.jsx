@@ -14,7 +14,7 @@ export default function Navigation() {
             <div className={css.navLinks}>
             <Link to="/"><GiFilmSpool className={css.navIcon} /></Link>
             <NavLink className={NavLinkStyle} to="/">Головна</NavLink>
-            <NavLink className={NavLinkStyle} to="/movies">Фільми 
+            <NavLink className={NavLinkStyle} to="/novelty">Новинки 
                 </NavLink>
             </div>
             <NavLink to="/movies">

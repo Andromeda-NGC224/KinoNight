@@ -10,7 +10,7 @@ import { IoIosStarOutline } from "react-icons/io";
 
 export default function MovieCard({ movie, movieId }) {
 
-    const { poster_path, title, vote_average, overview, genres, release_date, original_title, runtime
+    const { poster_path, title, vote_average, overview, genres, release_date, original_title, runtime, backdrop_path
     } = movie;
     const releaseDate = release_date ? release_date.slice(0, 4) : '';
 
@@ -43,6 +43,8 @@ export default function MovieCard({ movie, movieId }) {
     const backLinkHref = useRef(location.state ?? "/");
     const noImg = "https://i.pinimg.com/564x/5d/b3/f9/5db3f9d7bd0de311088be68c4edaa001.jpg"
     
+    const noImgDrop = 'https://i.pinimg.com/originals/c4/97/32/c49732efccddb4e5f41c3cac2e51c140.jpg'
+
     return (
         <div className={css.allContent}>
 
@@ -92,6 +94,8 @@ export default function MovieCard({ movie, movieId }) {
                     </li>
             </ul>
             </div>
+            <div className={css.mainContPoster}> <img className={css.pictureDrop} src={backdrop_path ? (`https://image.tmdb.org/t/p/original/${backdrop_path}`) : noImgDrop} alt={title} /></div>
+
             <div className={css.additionalCont}>
                 <p className={css.additionalTitle}>Додаткова інформація <IoIosArrowDropdown className={css.additionalTitleIcon}/>
 </p>

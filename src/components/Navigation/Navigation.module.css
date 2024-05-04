@@ -26,6 +26,7 @@
 .navIconSearch {
   width: 30px;
   height: 30px;
+  color: #fff;
   margin-right: 30px;
   transition: color 0.5s linear;
 }

@@ -48,12 +48,12 @@
   background: #fff;
   border-radius: 50%;
   top: 79px;
-  left: 560px;
+  left: 30vw;
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
     0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
-  animation: animate1 5s linear infinite;
+  animation: animate1 6s linear infinite;
   z-index: -1;
-  animation-delay: 5s;
+  animation-delay: 1s;
 }
 .shootingStar1:before {
   content: "";
@@ -72,11 +72,127 @@
   20% {
     opacity: 1;
   }
+  40% {
+    opacity: 1;
+  }
   70% {
-    opacity: 0;
+    opacity: 0.15;
+  }
+  80% {
+    opacity: 0.08;
   }
   100% {
-    transform: rotate(310deg) translateX(-1000px);
+    transform: rotate(310deg) translateX(-800px);
     opacity: 0;
+  }
+}
+
+.shootingStar2 {
+  position: absolute;
+  opacity: 0;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  top: 35vh;
+  left: 80vw;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: animate2 4s ease-in-out infinite;
+  z-index: -1;
+  animation-delay: 20s;
+}
+.shootingStar2:before {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(295deg) translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.15;
+  }
+  80% {
+    opacity: 0.08;
+  }
+  100% {
+    transform: rotate(295deg) translateX(-450px);
+    opacity: 0;
+  }
+}
+
+.shootingStar3 {
+  position: absolute;
+  opacity: 0;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  top: 35vh;
+  left: 60vw;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1),
+    0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+  animation: animate3 6s linear infinite;
+  z-index: -1;
+  animation-delay: 13s;
+}
+.shootingStar3:before {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+@keyframes animate3 {
+  0% {
+    transform: rotate(305deg) translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.15;
+  }
+  80% {
+    opacity: 0.08;
+  }
+  100% {
+    transform: rotate(305deg) translateX(-500px);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .stars:after {
+    box-shadow: 80vw 24vh 0.2vmin #fff, 88vw 28vh 0.1vmin #fff,
+      77vw 21vh 0.4vmin #fff, 2vw 16vh 0.3vmin #fff, 12vw 26vh 0.3vmin #fff,
+      85vw 32vh 0.3vmin #fff, 91vw 24vh 0.4vmin #fff, 98vw 25vh 0.3vmin #fff,
+      94vw 39vh 0.3vmin #fff, 29vw 29vh 0.3vmin #fff, 94vw 22vh 0.4vmin #fff,
+      30vw 16vh 0.3vmin #fff, 15vw 11vh 0.4vmin #fff, 12vw 26vh 0.3vmin #fff,
+      69vw 21vh 0.3vmin #fff, 79vw 15vh 0.3vmin #fff, 89vw 15vh 0.2vmin #fff,
+      69vw 12vh 0.3vmin #fff, 24vw 31vh 0.4vmin #fff, 23vw 27vh 0.3vmin #fff,
+      14vw 30vh 0.3vmin #fff, 5vw 39vh 0.3vmin #fff, 75vw 39vh 0.3vmin #fff,
+      76vw 33vh 0.3vmin #fff, 7vw 24vh 0.3vmin #fff, 65vw 18vh 0.2vmin #fff,
+      66vw 31vh 0.4vmin #fff, 50vw 23vh 0.3vmin #fff, 42vw 31vh 0.5vmin #fff,
+      44vw 60vh 0.3vmin #fff, 57vw 44vh 0.4vmin #fff, 50vw 50vh 0.3vmin #fff;
   }
 }

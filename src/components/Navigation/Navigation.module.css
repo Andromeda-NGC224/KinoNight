@@ -11,18 +11,6 @@
   background-color: #220335;
   background-image: linear-gradient(to bottom right, #000000, #351255, #8909d7);
 }
-.navLinks:after {
-  box-shadow: 80vw 14vh 0.2vmin #fff, 88vw 18vh 0.1vmin #fff,
-    77vw 11vh 0.2vmin #fff, 2vw 6vh 0.1vmin #fff, 12vw 16vh 0.2vmin #fff,
-    85vw 22vh 0.1vmin #fff, 91vw 14vh 0.2vmin #fff, 98vw 15vh 0.1vmin #fff,
-    94vw 29vh 0.2vmin #fff, 29vw 19vh 0.1vmin #fff, 94vw 12vh 0.1vmin #fff,
-    30vw 6vh 0.2vmin #fff, 15vw 1vh 0.1vmin #fff, 12vw 16vh 0.1vmin #fff,
-    69vw 11vh 0.2vmin #fff, 79vw 5vh 0.2vmin #fff, 89vw 5vh 0.2vmin #fff,
-    69vw 2vh 0.2vmin #fff, 24vw 21vh 0.1vmin #fff, 23vw 17vh 0.2vmin #fff,
-    14vw 20vh 0.2vmin #fff, 5vw 29vh 0.2vmin #fff, 75vw 29vh 0.2vmin #fff,
-    76vw 23vh 0.2vmin #fff, 7vw 14vh 0.2vmin #fff, 65vw 8vh 0.2vmin #fff,
-    66vw 21vh 0.1vmin #fff;
-}
 
 .navIcon {
   margin-left: 30px;

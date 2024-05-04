@@ -79,13 +79,25 @@
   padding-bottom: 12px;
 }
 .additionaListItem {
-  padding-bottom: 8px;
-  color: #bfa9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ebe4ff;
+  border: 1px solid #b1a6ce;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  width: 80px;
+  height: 23px;
+  padding: 6px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: border-color 0.5s ease;
+  line-height: none;
 }
 
 .additionaListItem:hover {
-  color: rgb(247, 211, 165);
+  border-color: rgb(99, 59, 151);
 }
+
 .ratingIcon {
   padding-right: 4px;
   width: 18px;

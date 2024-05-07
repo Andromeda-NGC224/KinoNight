@@ -4,8 +4,10 @@ import TrailerPlayer from '../TrailerPlayer/TrailerPlayer'
 
 Modal.setAppElement("#root");
 
-export default function ModalTrailer({ isOpen, onClose, trailer }) {  
-    const url = trailer.results
+export default function ModalTrailer({ isOpen, onClose, trailerUK, trailerUS }) {  
+  const urlUK = trailerUK.results
+  const urlUS = trailerUS.results
+
 
     const customStyles = {
         overlay: {
@@ -34,7 +36,7 @@ export default function ModalTrailer({ isOpen, onClose, trailer }) {
       isOpen={isOpen}
        style={customStyles}
          onRequestClose={onClose}>
-         <TrailerPlayer url={url}></TrailerPlayer>
+         <TrailerPlayer url={urlUK.length !== 0 ? urlUK : urlUS}></TrailerPlayer>
     </Modal>
   );
 }

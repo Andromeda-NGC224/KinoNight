@@ -10,7 +10,7 @@ import { IoIosStarOutline } from "react-icons/io";
 import ModalTrailer from '../ModalTrailer/ModalTrailer'
 
 
-export default function MovieCard({ movie, movieId, trailer }) {
+export default function MovieCard({ movie, movieId, trailerUK, trailerUS }) {
 
     const { poster_path, title, vote_average, overview, genres, release_date, original_title, runtime, backdrop_path
     } = movie;
@@ -108,8 +108,12 @@ export default function MovieCard({ movie, movieId, trailer }) {
             </ul>
             </div>
             <div className={css.mainContPoster}> <img className={css.pictureDrop} src={backdrop_path ? (`https://image.tmdb.org/t/p/original/${backdrop_path}`) : noImgDrop} alt={title} />
-                {trailer.results && trailer.results.length !== 0 && <BtnWatch onClick={openModal} trailer={trailer}></BtnWatch>}
-                 {modalIsOpen && <ModalTrailer isOpen={modalIsOpen} onClose={closeModal} trailer={trailer} />}
+                {trailerUK.results && trailerUK.results.length !== 0 ? (
+    <BtnWatch onClick={openModal} trailerUK={trailerUK} />
+) : trailerUS.results && trailerUS.results.length !== 0 ? (
+    <BtnWatch onClick={openModal} trailerUS={trailerUS} />
+) : null}
+                 {modalIsOpen && <ModalTrailer isOpen={modalIsOpen} onClose={closeModal} trailerUK={trailerUK} trailerUS={trailerUS} />}
             </div>
 
             <div className={css.additionalCont}>

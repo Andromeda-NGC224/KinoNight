@@ -5,12 +5,13 @@ import MovieCard from '../../components/MovieCard/MovieCard'
 import Loader from "../../components/Loader/Loader";
 import Error from "../../components/Error/Error";
 import css from '../MovieDetailsPage/MovieDetailsPage.module.css'
-import {getMovieTrailer} from '../../api'
-
+import {getMovieTrailerUK} from '../../api'
+import {getMovieTrailerUS} from '../../api'
 
 export default function MovieDetailsPage() {
     const [movies, setMovies] = useState([]);
-    const [trailer, setTrailer] = useState([]);
+    const [trailerUK, setTrailerUK] = useState([]);
+    const [trailerUS, setTrailerUS] = useState([]);
     const { movieId } = useParams(); 
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -33,28 +34,41 @@ useEffect(() => {
             setLoading(false)
         }
     }
-    async function fetchMovieTrailer() {
+    async function fetchMovieTrailerUK() {
         try {
-            const data = await getMovieTrailer(movieId)
+            const data = await getMovieTrailerUK(movieId)
             if (data.length === 0) {
           setNoData(true);
           return;
         }
-            setTrailer(data)
+            setTrailerUK(data)
+        } catch (error) {
+            setError(true)
+        }
+    }
+    async function fetchMovieTrailerUS() {
+        try {
+            const data = await getMovieTrailerUS(movieId)
+            if (data.length === 0) {
+          setNoData(true);
+          return;
+        }
+            setTrailerUS(data)
         } catch (error) {
             setError(true)
         }
     }
 
     fetchDetailsMovies()
-    fetchMovieTrailer()
+    fetchMovieTrailerUK()
+    fetchMovieTrailerUS()
 }, [movieId]);
 
     return (
         <div className={css.mainCont}>
             {loading && <Loader />}
             {error && <Error/>}
-            <MovieCard movie={movies} movieId={movieId} trailer={trailer} />
+            <MovieCard movie={movies} movieId={movieId} trailerUK={trailerUK} trailerUS={trailerUS} />
             {noData && <p>Немає інформації про фільм, вибачте.</p>}
         </div>
     )

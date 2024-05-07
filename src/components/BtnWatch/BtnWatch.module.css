@@ -1,0 +1,32 @@
+.btnWatch {
+  background-color: #0c0013;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  cursor: pointer;
+}
+.btnWatchIcon {
+  width: 100%;
+  height: 100%;
+  color: #ebe4ff;
+  transition: color 300ms ease-out;
+}
+.btnWatchIcon:hover {
+  color: #9288ad;
+}
+@media screen and (max-width: 320px) {
+  .btnWatch {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .btnWatch {
+    width: 60px;
+    height: 60px;
+  }
+}

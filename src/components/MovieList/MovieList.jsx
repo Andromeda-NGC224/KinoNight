@@ -5,7 +5,7 @@ import css from '../MovieList/MovieList.module.css'
 
 export default function MovieList({ films }) {
     const location = useLocation()
-    const noImg = "https://i.pinimg.com/564x/5d/b3/f9/5db3f9d7bd0de311088be68c4edaa001.jpg"
+    const noImg = "https://i.pinimg.com/originals/ac/5b/b3/ac5bb3b5260282eaee051d8a1ebe5ac8.jpg"
 
 
     return (

@@ -101,3 +101,20 @@ export const getNewestMovies = async (page) => {
   const response = await axios.get(url, options);
   return response.data.results;
 };
+
+export const getMovieTrailer = async (movieId) => {
+  const url = `/3/movie/${movieId}/videos`;
+
+  const options = {
+    headers: {
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjOTkzMjVhOTAzZGMyMmM5ZDI0ZGUxMjRiZDRlYzJjNyIsInN1YiI6IjY2MjdhMWIzNjNlNmZiMDE3ZWZkY2EwNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.x-KuWUIz479j2eqEG3Tx_TXqkv-_QOpTnYYL_IzpEhU",
+    },
+    params: {
+      language: "uk",
+    },
+  };
+
+  const response = await axios.get(url, options);
+  return response.data;
+};

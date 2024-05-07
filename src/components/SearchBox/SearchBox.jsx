@@ -9,7 +9,7 @@ export default function SearchBox({ onSearch }) {
         const inputValue = event.target.elements.searchInput.value
         event.preventDefault()
         if (!inputValue.trim()) {
-             toast.error("Please enter a search word.")
+             toast.error("Введіть, будь ласка, пошукове слово.")
         }
         onSearch(
 
@@ -22,7 +22,7 @@ export default function SearchBox({ onSearch }) {
         <div>
              <Toaster position="top-right" />
         <form className={css.form} onSubmit={handleSubmit}>
-            <input className={css.input} type="text" name="searchInput" autoComplete="off" placeholder="Пошку фільму..." />
+            <input className={css.input} type="text" name="searchInput" autoComplete="off" placeholder="Пошук фільму..." />
             <button className={css.btn} type="submit"><IoSearch size={26} className={css.iconSearch} /></button>
         </form>
     </div>

@@ -5,7 +5,7 @@ import Error from "../../components/Error/Error";
 import css from '../MovieCast/MovieCast.module.css'
 
 export default function MovieCast({ movieId }) {
-    const noImg = "https://i.pinimg.com/564x/5d/b3/f9/5db3f9d7bd0de311088be68c4edaa001.jpg"
+    const noImg = "https://i.pinimg.com/564x/4a/7a/3c/4a7a3cc83b32f048a6ad55e35112f037.jpg"
     const [casts, setCasts] = useState([]);
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);

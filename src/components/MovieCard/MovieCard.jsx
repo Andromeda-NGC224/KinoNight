@@ -3,19 +3,23 @@ import { useRef, useState, useEffect } from "react";
 import BackLink from '../BackLink/BackLink'
 import MovieReviews from '../MovieReviews/MovieReviews'
 import MovieCast from '../MovieCast/MovieCast'
+import BtnWatch from '../BtnWatch/BtnWatch'
 import css from './MovieCard.module.css'
 import { IoIosArrowDropdown } from "react-icons/io";
 import { IoIosStarOutline } from "react-icons/io";
+import ModalTrailer from '../ModalTrailer/ModalTrailer'
 
 
-export default function MovieCard({ movie, movieId }) {
+export default function MovieCard({ movie, movieId, trailer }) {
 
     const { poster_path, title, vote_average, overview, genres, release_date, original_title, runtime, backdrop_path
     } = movie;
     const releaseDate = release_date ? release_date.slice(0, 4) : '';
 
+
     const [seeCast, setSeeCast] = useState(false);
     const [seeReviews, setSeeReviews] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const onMovieCast = () => {
     setSeeCast(true)
@@ -24,10 +28,17 @@ export default function MovieCard({ movie, movieId }) {
     const onMovieReview = () => {
       setSeeReviews(true)
     setSeeCast(false)
-    
     }
+
+    const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
     
-     useEffect(() => {
+    useEffect(() => {
     if (seeCast || seeReviews) {
         setTimeout(() => {
             window.scrollTo({
@@ -36,12 +47,14 @@ export default function MovieCard({ movie, movieId }) {
             });
         }, 300);
     }
-}, [seeCast, seeReviews]);
+    }, [seeCast, seeReviews]);
+    
+
     
 
     const location = useLocation();
     const backLinkHref = useRef(location.state ?? "/");
-    const noImg = "https://i.pinimg.com/564x/5d/b3/f9/5db3f9d7bd0de311088be68c4edaa001.jpg"
+    const noImg = "https://i.pinimg.com/originals/ac/5b/b3/ac5bb3b5260282eaee051d8a1ebe5ac8.jpg"
     
     const noImgDrop = 'https://i.pinimg.com/originals/c4/97/32/c49732efccddb4e5f41c3cac2e51c140.jpg'
 
@@ -94,7 +107,10 @@ export default function MovieCard({ movie, movieId }) {
                     </li>
             </ul>
             </div>
-            <div className={css.mainContPoster}> <img className={css.pictureDrop} src={backdrop_path ? (`https://image.tmdb.org/t/p/original/${backdrop_path}`) : noImgDrop} alt={title} /></div>
+            <div className={css.mainContPoster}> <img className={css.pictureDrop} src={backdrop_path ? (`https://image.tmdb.org/t/p/original/${backdrop_path}`) : noImgDrop} alt={title} />
+                {trailer.results && trailer.results.length !== 0 && <BtnWatch onClick={openModal} trailer={trailer}></BtnWatch>}
+                 {modalIsOpen && <ModalTrailer isOpen={modalIsOpen} onClose={closeModal} trailer={trailer} />}
+            </div>
 
             <div className={css.additionalCont}>
                 <p className={css.additionalTitle}>Додаткова інформація <IoIosArrowDropdown className={css.additionalTitleIcon}/>

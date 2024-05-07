@@ -10,6 +10,7 @@
   left: 0;
   background-color: #220335;
   background-image: linear-gradient(to bottom right, #000000, #351255, #8909d7);
+  z-index: 9999999;
 }
 
 .navIcon {

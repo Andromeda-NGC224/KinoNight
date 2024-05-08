@@ -10,6 +10,7 @@
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 .btn:hover {
   background-image: linear-gradient(
@@ -17,4 +18,9 @@
     rgb(228, 188, 114),
     rgb(185, 7, 185)
   );
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    margin-bottom: 12px;
+  }
 }

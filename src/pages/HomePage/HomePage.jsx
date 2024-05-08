@@ -49,7 +49,6 @@ useEffect(() => {
             {error && <Error/>}
             {trandingFilms.length > 0 && <MovieList films={trandingFilms}></MovieList>}
             {trandingFilms.length > 0 && <LoadMoreBtn onClick={handleLoadMore}></LoadMoreBtn>}
-            <div style={{ height: '32px' }}></div>
         </div>
     )
 }

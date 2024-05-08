@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import css from '../Navigation/Navigation.module.css'
 import clsx from "clsx";
 import { GiFilmSpool } from "react-icons/gi";
@@ -12,7 +12,7 @@ export default function Navigation() {
     return (
         <nav className={css.nav}>
             <div className={css.navLinks}>
-            <Link to="/"><GiFilmSpool className={css.navIcon} /></Link>
+            <GiFilmSpool className={css.navIcon} />
             <NavLink className={NavLinkStyle} to="/">Головна</NavLink>
             <NavLink className={NavLinkStyle} to="/novelty">Новинки 
                 </NavLink>

@@ -61,7 +61,7 @@ export default function SearchPage() {
             {error && <Error />}
   {noData && <p style={{ textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '40px'}}>На жаль, за цим запитом фільмів не знайдено.</p>}
             {movies.length > 0 && <MovieList films={movies}></MovieList>}
-            {movies.length > 0 && <LoadMoreBtn onClick={handleLoadMore}></LoadMoreBtn>}
+            {!noData && movies.length > 0 && <LoadMoreBtn onClick={handleLoadMore}></LoadMoreBtn>}
             <div style={{ height: '32px' }}></div>
         </div>
     )

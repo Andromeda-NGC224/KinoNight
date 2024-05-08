@@ -1,18 +1,18 @@
-import { Vortex } from 'react-loader-spinner'
+import { Rings } from 'react-loader-spinner'
 import css from './Loader.module.css';
 
 export default function Loader() {
   return (
       <div className={css.loaderContainer}>
-        <Vortex 
+        <Rings
   visible={true}
   height="80"
   width="80"
-  ariaLabel="vortex-loading"
+  color="#ebe4ff"
+  ariaLabel="rings-loading"
   wrapperStyle={{}}
-  wrapperClass="vortex-wrapper"
-  colors={['red', 'pink', 'lightblue', 'yellow', 'orange', 'purple']}
-      />
+  wrapperClass=""
+  />
       </div>
     )
  }

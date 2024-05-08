@@ -12,7 +12,7 @@ import ModalTrailer from '../ModalTrailer/ModalTrailer'
 
 export default function MovieCard({ movie, movieId, trailerUK, trailerUS }) {
 
-    const { poster_path, title, vote_average, overview, genres, release_date, original_title, runtime, backdrop_path
+    const { poster_path, title, vote_average, overview, genres, release_date, original_title, runtime, backdrop_path, production_countries
     } = movie;
     const releaseDate = release_date ? release_date.slice(0, 4) : '';
 
@@ -82,6 +82,18 @@ export default function MovieCard({ movie, movieId, trailerUK, trailerUS }) {
                         <p className={css.ratingText}><IoIosStarOutline className={css.ratingIcon}/>
                              {vote_average !== 0 ? (<strong>{vote_average}</strong>) : "-"}/10
                         </p>
+                    </li>
+                    <li className={css.listItemGanres}>
+                        <h4 className={css.listItemTitle}>Країна :</h4>
+                        {production_countries && production_countries.length > 0 ? (
+                            production_countries.map((country, index) => (
+                                <p className={css.genresText} key={index}>
+                                    {country.name}
+                                </p>
+                            ))
+                        ) : (
+                            <p className={css.genresText}>Немає інформації</p>
+                        )}
                     </li>
                     <li className={css.listItemGanres}>
                         <h4 className={css.listItemTitle}>Жанр :</h4>

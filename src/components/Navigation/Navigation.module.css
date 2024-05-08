@@ -39,7 +39,7 @@
   transition: color 0.5s linear, width 0.3s ease-out, height 0.3s ease-out;
 }
 .navIconSearch:hover {
-  color: rgb(224, 196, 169);
+  color: #bcb0c4;
   animation: vibrate-1 1.2s linear infinite both;
   width: 35px;
   height: 35px;

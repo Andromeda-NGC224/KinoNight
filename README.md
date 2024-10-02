@@ -1,5 +1,5 @@
-# MoviePicker: Personalized Movie Selection 🎬
-MoviePicker is a web application that provides a convenient and personalized way for users to select movies. Built with a focus on user experience, the app allows users to explore movie options, view detailed information, and make their selections through a user-friendly interface. The application implements public routes for seamless navigation between components.
+# KinoNight: Personalized Movie Selection 🎬
+KinoNight is a web application that provides a convenient and personalized way for users to select movies. Built with a focus on user experience, the app allows users to explore movie options, view detailed information, and make their selections through a user-friendly interface. The application implements public routes for seamless navigation between components.
 
 ## 🎬 Features:
 - Personalized Movie Recommendations: Users can receive movie suggestions based on preferences and past choices.
